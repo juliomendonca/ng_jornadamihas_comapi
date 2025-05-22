@@ -19,8 +19,8 @@ export class SeletorPassageiroComponent implements ControlValueAccessor {
   @Input() subtitulo: string = ''
 
   value: number = 0
-  onChange = (val: number) => {}
-  onTouch = () => {}
+  onChange = (val: number) => { }
+  onTouch = () => { }
 
   writeValue(val: any): void {
     this.value = val
@@ -29,19 +29,19 @@ export class SeletorPassageiroComponent implements ControlValueAccessor {
     this.onChange = fn
   }
   registerOnTouched(fn: any): void {
-    this.onChange = fn
+    this.onTouch = fn
   }
   setDisabledState?(isDisabled: boolean): void {
-    
+
   }
 
-  incrementar () {
+  incrementar() {
     this.value += 1
     this.onChange(this.value)
     this.onTouch()
   }
 
-  decrementar () {
+  decrementar() {
     if (this.value > 0) {
       this.value -= 1
       this.onChange(this.value)
